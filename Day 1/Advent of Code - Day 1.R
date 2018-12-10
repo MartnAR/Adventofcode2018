@@ -8,6 +8,7 @@ freq <- read.csv('frequency adjustment.csv')
 # Part 1: Cumulative sum frequency
 cumFreq <- cumsum(freq$frequency)
 firstStar <- tail(cumFreq, n = 1)
+# Answer is 406
 
 # Turn to data frame
 cumFreq <- data.frame('frequency' = cumFreq)
@@ -24,3 +25,5 @@ while(nrow(final) == 0){
 
 # Order the repeated numbers; first one is the answer
 final %>% arrange(order) %>% head()
+
+# Answer is 312
